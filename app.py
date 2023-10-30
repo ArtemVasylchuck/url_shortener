@@ -1,12 +1,13 @@
-from flask import Flask, json
+from flask import Flask, json, request, jsonify
 
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def hello_world():
-    return "Hello World!"
+@app.route('/shortener', methods=['POST'])
+def get_url():
+
+    return jsonify({"success": "true"})
 
 
 if __name__ == '__main__':
