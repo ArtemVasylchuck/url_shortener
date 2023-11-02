@@ -1,8 +1,12 @@
 from flask import Flask, json, request, jsonify
 import keygen
+from db_config import db
 
 app = Flask(__name__)
 
+app.config["SQLALCHEMY_DATABASE_URL"] = "sqlite:///urls.db"
+
+db.init_app(app)
 
 @app.route('/shortener', methods=['POST'])
 def get_url():
