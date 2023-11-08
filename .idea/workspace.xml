@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aad64553-cdce-4325-a739-f74bd8c49366" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +33,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Python.url_shortener">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -80,17 +81,17 @@
       <method v="2" />
     </configuration>
     <configuration name="url_shortener" type="PythonConfigurationType" factoryName="Python">
+      <module name="url_shortener" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\38095\PycharmProjects\url_shortener\venv\Scripts\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
       <option name="PARAMETERS" value="" />
@@ -149,7 +150,10 @@
       <workItem from="1698691140907" duration="3670000" />
       <workItem from="1698834450962" duration="6344000" />
       <workItem from="1698916078628" duration="4423000" />
-      <workItem from="1699134475755" duration="31000" />
+      <workItem from="1699134475755" duration="1256000" />
+      <workItem from="1699257360790" duration="57000" />
+      <workItem from="1699257456371" duration="1463000" />
+      <workItem from="1699475794337" duration="365000" />
     </task>
     <servers />
   </component>
