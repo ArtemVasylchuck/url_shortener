@@ -1,8 +1,8 @@
 from flask import Flask, json, request, jsonify, redirect
 
-import keygen
-
 import redis
+
+import keygen
 
 from utils import url_beatify, make_absolute_path_from_uri
 
@@ -16,7 +16,15 @@ def get_url():
     url = url_beatify(data.get("url"))
     url_hash = keygen.create_random_key()
     full_url = make_absolute_path_from_uri(url_hash)
+
+    while True:
+        if r.get(url_hash):
+            url_hash = keygen.create_random_key()
+        else:
+            break
+
     r.set(url_hash, url)
+
     return jsonify({"status": "200",
                     "data": {
                         "initial_url": url,
