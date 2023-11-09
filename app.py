@@ -6,6 +6,10 @@ import keygen
 
 from utils import url_beatify, make_absolute_path_from_uri
 
+from pydantic import ValidationError
+
+from response_model import UrlModel
+
 app = Flask(__name__)
 
 r = redis.Redis(host='localhost', port=6379, decode_responses=True)
@@ -13,7 +17,13 @@ r = redis.Redis(host='localhost', port=6379, decode_responses=True)
 @app.route('/shortener', methods=['POST'])
 def get_url():
     data = request.json
-    url = url_beatify(data.get("url"))
+    url = data.get("url")
+
+    try:
+        UrlModel(url=url)
+    except ValidationError:
+        url = url_beatify(url)
+
     url_hash = keygen.create_random_key()
     full_url = make_absolute_path_from_uri(url_hash)
 
